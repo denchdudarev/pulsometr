@@ -6,35 +6,9 @@
 
 body {
     .wrapper {
+        position: relative;
         font-size: 26px;
-    }
-}
-
-.container {
-    max-width: 950px;
-    margin: 0 auto;
-    background-color: cadetblue;
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #FFFFFF;
-}
-
-.representative {
-    display: flex;
-    flex-direction: column;
-    font-weight: 500;
-    font-size: 18px;
-    &__title {
-        font-size: 12px;
-        line-height: 12px;
-        margin-bottom: 7px;
-    }
-    &__subtitle {
-        line-height: 28.62px;
+        background-color: cadetblue;
     }
 }
 
@@ -60,4 +34,124 @@ body {
     border: 0;
     border-radius: 5px;
     padding: 7px 25px;
+    &_order {
+        font-size: 16px;
+        line-height: 25px;
+        padding: 12.5px 42px;
+    }
+}
+
+.advantage {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 136px;
+        gap: 20px;
+    }
+    &__image {
+        width: 45px;
+        height: 45px;
+    }
+    &__description {
+        text-align: center;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 14px;
+    }
+}
+
+.ibg {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    & img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        /*opacity: 0;
+        visibility: hidden;*/
+    }
+}
+
+.container {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.representative {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 18px;
+    &__title {
+        font-size: 12px;
+        line-height: 12px;
+        margin-bottom: 7px;
+    }
+    &__subtitle {
+        line-height: 28.62px;
+    }
+}
+
+.main-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: #FFFFFF;
+    padding: 93px 0;
+    &__header {
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 17px;
+    }
+    &__title {
+        font-size: 42px;
+        font-weight: 700;
+        line-height: 42px;
+    }
+    &__subtitle {
+        font-size: 24px;
+        line-height: 24px;
+        font-weight: 500;
+    }
+    &__advantage.advantage {
+        padding: 60px 0;
+    }
+    &__order {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+        font-size: 16px;
+        line-height: 25px;
+        font-weight: 500;
+    }
+    &__link-catalog span {
+        text-transform: uppercase;
+        text-decoration: underline;
+    }
+}
+
+.main-banner {
+    position: absolute;
+    width: 1000px;
+    height: 1000px;
+    z-index: 5;
+    & img {
+        object-fit: cover;  
+    }
 }
